@@ -1,9 +1,9 @@
 -- create a database
-create database cosmeticshop;
+CREATE database cosmeticshop;
 
 -- create a table
-use cosmeticshop;
-create table cosmeticshopfunnel
+USE cosmeticshop;
+CREATE TABLE cosmeticshopfunnel
 (
     event_time TIMESTAMP,
     event_type CHAR(18),
@@ -53,11 +53,11 @@ INSERT INTO holidays VALUES
 select * from holidays;
 
 -- find out which holiday has the most activity
-select holiday, count(holiday) from cosmeticshopfunnel
-    join (select holiday, DATE_SUB(date_of_holiday, INTERVAL 3 DAY) as beforedate, DATE_ADD(date_of_holiday, INTERVAL 3 DAY) as afterdate from holidays)
-    on event_time > beforedate and event_time < afterdate
+select holiday, count(holiday) from cosmeticshopfunnel a, holidays b
+    where DATE_TRUNC('day',a.event_time) = b.date_of_holiday
     group by holiday
-    order by count(holiday) desc;
+    order by 2 desc;
+
 
 -- find out which is the top brand purchased during each of the holidays
 select holiday, brand, count(brand) from cosmeticshopfunnel
