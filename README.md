@@ -15,10 +15,8 @@ SingleStore Managed Service delivers instant, effortless access to the world’s
 Start your cluster on SingleStore Managed Service at https://www.singlestore.com
 
 Developer connections:
-Documentation: https://docs.singlestore.com
-Website: https://developers.singlestore.com
-Twitter: https://twitter.com/SingleStoreDevs
-GitHub: https://github.com/singlestore-labs
-Forums: https://www.singlestore.com/forum
-
-#MemSQL is now #Singlestore
+* Documentation: https://docs.singlestore.com
+* Website: https://www.singlestore.com
+* Twitter: https://twitter.com/SingleStoreDevs
+* GitHub: https://github.com/singlestore-labs
+* Forums: https://www.singlestore.com/forum
