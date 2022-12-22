@@ -1,3 +1,6 @@
+-- set date/time conversion compatibility
+SET GLOBAL data_conversion_compatibility_level='7.0';
+
 -- create a database
 CREATE database cosmeticshop;
 
