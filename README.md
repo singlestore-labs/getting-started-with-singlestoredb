@@ -1,5 +1,7 @@
 # Getting Started with SingleStore
 
+**Attention**: The code in this repository is intended for experimental use only and is not fully tested, documented, or supported by SingleStore. Visit the [SingleStore Forums](https://www.singlestore.com/forum/) to ask questions about this repository.
+
 Take a quick tour of SingleStore, SQL Editor tool, and look at how to quickly ingest and query lots of data using SingleStore Pipelines.
 
 In this video, we take a quick tour of SingleStore, SQL Editor tool, and look at how to quickly ingest and query lots of data using SingleStore Pipelines.
