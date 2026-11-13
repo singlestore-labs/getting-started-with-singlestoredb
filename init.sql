@@ -45,7 +45,7 @@ CREATE REFERENCE TABLE holidays
 -- insert holiday dates
 INSERT INTO holidays VALUES
 ("New Year's Day", "2020-1-1"),
-("Martin Luther King Jr. Day", "2020-02-20"),
+("Martin Luther King Jr. Day", "2020-01-20"),
 ("Memorial Day", "2020-05-25"),
 ("Independence Day", "2020-07-04"),
 ("Labor Day", "2020-09-07"),
@@ -67,7 +67,7 @@ select holiday, brand, count(brand) from cosmeticshopfunnel
     join (select holiday, DATE_SUB(date_of_holiday, INTERVAL 3 DAY) as beforedate, DATE_ADD(date_of_holiday, INTERVAL 3 DAY) as afterdate from holidays)
     on event_time > beforedate and event_time < afterdate
     where event_type = "purchase" and brand != ""
-    group by holiday
+    group by holiday, brand
     order by count(holiday) desc;
 
 -- find out if customers are sensitive to the average price of the brands
